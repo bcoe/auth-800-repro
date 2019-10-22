@@ -9,7 +9,7 @@ let logger = null
 setInterval(async () => {
   if (!logging) {
     logging = new Logging();
-// Selects the log to write to
+    // Selects the log to write to
     logger = logging.log('grpc-stress');
   }
   const metadata = {
@@ -30,4 +30,3 @@ const port = process.env.PORT || 8080;
 app.listen(port, () => {
     console.log('Hello world listening on port', port);
 });
-
